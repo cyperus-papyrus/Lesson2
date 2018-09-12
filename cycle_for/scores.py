@@ -27,6 +27,6 @@ for classes in classes_scores:
 result_for_school = average_value(all_scores_in_school)
 print('The average score in all school:', result_for_school)
 
-for sch_class in classes_scores:
-    result_for_class = average_value(sch_class['scores'])
-    print('The average score in class', sch_class['school_class'] + ':', result_for_class)
+for each_class in classes_scores:
+    result_for_class = average_value(each_class['scores'])
+    print('The average score in class', each_class['school_class'] + ':', result_for_class)
