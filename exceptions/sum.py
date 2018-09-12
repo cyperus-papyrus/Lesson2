@@ -4,13 +4,13 @@
 
 
 def get_sum(num_one, num_two):
-    try:
-        sum = int(num_one) + int(num_two)
-        print(sum)
-    except ValueError:
-        print('Не все переменные - цифры!1')
+    sum = int(num_one) + int(num_two)
+    print(sum)
 
 
-get_sum(1234.9932, '3332')
-get_sum('sdlksdlksdl', '3332')
-get_sum(123+3.44, 12/3.99)
+try:
+    get_sum(1234.9932, '3332')
+    get_sum('sdlksdlksdl', '3332')
+    get_sum(123+3.44, 12/3.99)
+except ValueError:
+    print('Не все переменные - цифры!1')

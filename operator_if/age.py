@@ -7,10 +7,6 @@
 
 
 def occupation(age):
-    try:
-        age = int(age)
-    except ValueError:
-        return print('Возраст введен неправильно. Пожалуйста, используйте только цифры!')
     if age < 6:
         result = 'Вы ходите в детский сад'
     elif 6 <= age <= 17:
@@ -25,4 +21,8 @@ def occupation(age):
 
 
 user_age = input('Сколько вам лет?: ')
-print(occupation(user_age))
+try:
+    user_age = int(user_age)
+    print(occupation(user_age))
+except ValueError:
+    print('Возраст введен неправильно. Пожалуйста, используйте только цифры!')

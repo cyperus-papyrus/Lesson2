@@ -8,7 +8,7 @@
 
 
 def string_comparison(str1, str2):
-    if isinstance(str1, str) is False or isinstance(str2, str) is False:
+    if not isinstance(str1, str) or not isinstance(str2, str):
         result = 0
     elif str1 == str2:
         result = 1

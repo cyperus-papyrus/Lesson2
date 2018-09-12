@@ -11,7 +11,7 @@ def ask_user(questions_answers):
     user_say = str(input('Как дела? \n>>'))
     while True:
         try:
-            if user_say in questions_answers.keys():
+            if questions_answers.get(user_say):
                 user_say = str(input(questions_answers[user_say] + '\n>>'))
                 continue
             elif user_say == 'Хорошо':
@@ -26,4 +26,5 @@ def ask_user(questions_answers):
 
 answers_dict = {"Привет": "Привет!", "Как дела?": "Хорошо!", "Что делаешь?": "Программирую",
                 "На каком языке?": "Естественно, на Python!"}
-ask_user(answers_dict)
+if __name__ == '__main__':
+    ask_user(answers_dict)
